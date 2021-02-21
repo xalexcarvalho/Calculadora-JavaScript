@@ -11,29 +11,30 @@
 		<script type="text/javascript">
 
 		function calcular() {
-			var operacao = document.getElementById('operacao').value; //caputar operação selecionada pelo usuário
+			var operacao = document.getElementById('operacao').value; //caputa operação selecionada pelo usuário
 
-			var num1 = document.getElementById('num1').value;
+			var num1 = document.getElementById('num1').value; //captura o primeiro valor da operação
 
-			var num2 = document.getElementById('num2').value;
+			var num2 = document.getElementById('num2').value; //captura o segundo valor da operação
 
-			num1= parseFloat(num1);
+
+			num1= parseFloat(num1); //para o codigo entender que o valor dessa variavel é tipo float
 			num2= parseFloat(num2);
 
-			if(num1 == '' || num1 == null){
+			if(num1 == '' || num1 == null){                                   //se o valor da variavel for null ou vazio emitir um alert
 				alert("Favor digitar umnúmero válido para operação (num1)");
 				return false;
 			}
-			if(num2 == '' || num2 == null){
+			if(num2 == '' || num2 == null){                                    //se o valor da variavel for null ou vazio emitir um alert
 				alert("Favor digitar umnúmero válido para operação(num2)");
 				return false;
 			}
 
 
-			var resultado = null;
+			var resultado = null; 
 
 
-			switch(operacao){
+			switch(operacao){  
 
 				case '1': //subtração
 				resultado= num1-num2;
@@ -49,16 +50,17 @@
 					break;
 					
 				default:
-					alert("A opção selecionada é inválida");
+					alert("A opção selecionada é inválida"); 
 					return false;	
 			}
 			
-			document.getElementById('resultado').value= resultado;
+			document.getElementById('resultado').value= resultado; //caputara o resultado e coloca no id=resultado
 		
 
 		}
 			
 		</script>
+		
 	</head>
 
 	<body>
